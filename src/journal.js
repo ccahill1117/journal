@@ -33,6 +33,13 @@ Entry.prototype.consonantCount = function() {
   return counter;
 }
 
+Entry.prototype.getTeaser = function() {
+  var regex = /^.*?[\.!\?](?:\s|$)/;
+  var string = this.content;
+  var teaser = string.match(regex);
+  return teaser;
+}
+
 export function Journal() {
   this.entries = [];
   this.currentId = 0;

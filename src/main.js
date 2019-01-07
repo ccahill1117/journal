@@ -5,7 +5,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 var journal = new Journal();
-// var entryTest = new Entry("title","content","date");
+// var entryTest = new Entry("title","this is some content. And some more content. Swiggity.","date");
 // journal.addEntry(entryTest);
 // $('.blog-posts').append('<div class="well"><h2>' + entryTest.title + entryTest.date + '</h2><p>' + entryTest.content + '</p></div>');
 
@@ -22,9 +22,10 @@ $('#postButton').click(function() {
   let newEntry = new Entry(title, content, date);
   journal.addEntry(newEntry);
   console.log(journal.entries);
-  let vowelCount = newEntry.vowelCount()
-  let consonantCount = newEntry.consonantCount()
-  $('.blog-posts').append('<div class="card container"><h2>' + newEntry.title + "</h2><h3>" + newEntry.date + "</h3><p>" + newEntry.content + "</p><p><strong>Vowel Count:</strong> " + vowelCount + "</p><p><strong>Consonant Count:</strong> " + consonantCount + "</p></div>");
+  let vowelCount = newEntry.vowelCount();
+  let consonantCount = newEntry.consonantCount();
+  let getTeaser = newEntry.getTeaser();
+  $('.blog-posts').append('<div class="card container"><h2>' + newEntry.title + "</h2><h3>" + newEntry.date + "</h3><h4> Lil Teaser: " + getTeaser + "</h4><p>" + newEntry.content + "</p><p><strong>Vowel Count:</strong> " + vowelCount + "</p><p><strong>Consonant Count:</strong> " + consonantCount + "</p></div>");
 
 
   $('#flashMessage')
