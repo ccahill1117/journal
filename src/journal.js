@@ -20,6 +20,19 @@ Entry.prototype.vowelCount = function() {
   return counter;
 }
 
+Entry.prototype.consonantCount = function() {
+  var counter = 0;
+  var array = this.content.split("");
+  console.log(array)
+    for (var i = 0; i <= array.length; i++) {
+      if (consonantArray.includes(array[i]))
+      {
+      counter ++
+      }
+    }
+  return counter;
+}
+
 export function Journal() {
   this.entries = [];
   this.currentId = 0;
