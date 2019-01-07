@@ -67,12 +67,12 @@ button {
 
 }
 
-#blogTitlePreview{
+/* .title-header{
   font-family: serif;
   font-size: 40px
-}
+} */
 
-#blogContentPreview{
+.blog-posts {
   line-height: 25px;
   color: #666;
   font-family: serif;
